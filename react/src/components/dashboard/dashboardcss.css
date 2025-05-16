@@ -13,20 +13,32 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr; /* Adjust sidebar width as needed */
     gap: 20px;
     padding: 30px;
-    max-width: 900px;
+    max-width: 1000px; /* Increased max-width to accommodate two columns */
     width: 95%;
 }
 
 .sidebar {
-    /* Placeholder for the sidebar */
+    /* Styles for the sidebar if you have content there */
 }
 
-.main-content {
+.main-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two main columns */
+    gap: 20px;
+}
+
+.left-column {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    display: grid;
+    grid-template-rows: auto auto 1fr; /* Three rows for the right column */
     gap: 20px;
 }
 
@@ -35,6 +47,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    grid-column: 1 / 3; /* Header spans both columns in main-content-grid */
 }
 
 .balance-card, .limits-card, .goal-planner-card, .progress-card, .history-card {
