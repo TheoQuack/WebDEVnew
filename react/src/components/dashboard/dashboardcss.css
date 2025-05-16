@@ -229,3 +229,22 @@ body {
 .top-actions button:hover {
     background-color: #26c6da;
 }
+
+.balance-card {
+    /* ... (existing styles for balance-card) ... */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add some space between elements */
+}
+
+.target-balance {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 0.9em;
+}
+
+.target-balance span:last-child {
+    font-weight: bold;
+    color: #333;
+}

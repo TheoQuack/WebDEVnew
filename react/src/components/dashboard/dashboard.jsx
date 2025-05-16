@@ -12,12 +12,17 @@ function Dashboard() {
                     <div className="balance-card">
                         <h2>Available Balance</h2>
                         <p className="available-balance">₱150.00</p>
+                        <div className="target-balance">
+                            <span>Target Balance</span>
+                            <span>₱150.00</span>
+                        </div>
                     </div>
 
                     <div className="limits-card">
                         <h2>Transaction Limits</h2>
                         <p>Remaining this week: ₱100.00</p>
                         <h2>Limit by Category</h2>
+                        {/* ... (rest of the limits card) ... */}
                         <div className="limit-category">
                             <div className="limit-category-item">
                                 <span>Food</span>
@@ -89,6 +94,7 @@ function Dashboard() {
 
                     <div className="history-card">
                         <h2>History</h2>
+                        {/* ... (rest of the history card) ... */}
                         <div className="history-item">
                             <div className="transaction-details">
                                 <span>10/10/2025</span>
