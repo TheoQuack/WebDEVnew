@@ -1,0 +1,218 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    max-width: 900px;
+    width: 95%;
+}
+
+.sidebar {
+    /* Placeholder for the sidebar */
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.balance-card, .limits-card, .goal-planner-card, .progress-card, .history-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+}
+
+.balance-card h2, .limits-card h2, .goal-planner-card h2, .progress-card h2, .history-card h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.available-balance {
+    font-size: 1.5em;
+    color: #2e7d32;
+    margin-bottom: 5px;
+}
+
+.transaction-limits p, .limit-category-item, .goal-detail-item {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.progress-bar-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.progress-bar.food-progress {
+    width: 39.4%; /* 985 / 2500 * 100 */
+}
+
+.progress-bar.shopping-progress {
+    width: 94.3%; /* 1415 / 1500 * 100 */
+}
+
+.progress-bar.bills-progress {
+    width: 71.1%; /* 2134 / 3000 * 100 */
+}
+
+.progress-bar.others-progress {
+    width: 52.3%; /* 523 / 1000 * 100 */
+}
+
+.limit-category {
+    margin-bottom: 15px;
+}
+
+.limit-category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.goal-detail {
+    margin-top: 15px;
+}
+
+.goal-detail-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goal-circle-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.goal-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 6px solid #81c784;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #333;
+}
+
+.progress-steps {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 15px;
+    color: #777;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.step.active {
+    background-color: #29b6f6;
+    color: white;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.transaction-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-type {
+    background-color: #ffe0b2;
+    color: #ff9800;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.pending {
+    background-color: #ffcc80;
+    color: #ef6c00;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+}
+
+.top-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.top-actions button {
+    background-color: #4dd0e1;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.top-actions button:hover {
+    background-color: #26c6da;
+}
