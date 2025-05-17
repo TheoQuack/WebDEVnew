@@ -8,6 +8,7 @@ import TargetBalance from './DashboardCompTargetBalance/TargetBalance';
 import LimitByCategory from './DashboardCompLimitByCategory/LimitByCategory';
 import TransactionLimits from './DashboardCompTransactionLimits/TransactionLimits';
 import TransferAndSetGoal from './DashboardCompTransferAndSetGoal/TransferAndSetGoal';
+import PopupSidebar from './DashboardCompSideBar/Sidebar';
 
 function Dashboard() {
     // Mock data for the components (replace with your actual data)
@@ -25,8 +26,6 @@ function Dashboard() {
 
     return (
         <>
-        <div>
-         <Sidebar/>
         <div className="dashboard-container">
             <div className="dashboard-header">
                 <h1>Dashboard</h1>
@@ -57,7 +56,6 @@ function Dashboard() {
                     <History />
                 </div>
             </div>
-        </div>
         </div>
         </>
     

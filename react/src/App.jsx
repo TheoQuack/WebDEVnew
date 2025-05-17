@@ -8,14 +8,22 @@ import TransactionLimits from './components/DashboardCompTransactionLimits/Trans
 import TransferAndSetGoal from './components/DashboardCompTransferAndSetGoal/TransferAndSetGoal'
 import Progress from './components/DashboardCompProgress/Progress'
 import Dashboard from './components/Dashboard'
+import PopupSidebar from './components/DashboardCompSideBar/Sidebar'
+
+
 
 function App() {
 
-  return (
-    <>
-     <Dashboard/>
-    </>
-  )
+   return (
+    <div style={{ display: 'grid', gridTemplateColumns: '10% 80% 10%', gap: '20px', padding: '2px' }}>
+      <div>
+        <PopupSidebar />
+      </div>
+      <div>
+        <Dashboard />
+      </div>
+    </div>
+  );
 }
 
 export default App

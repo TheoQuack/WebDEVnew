@@ -1,44 +1,66 @@
-import React from 'react';
-import './Sidebar.css';
-import { User, Phone, Mail, MessageSquare, LogOut } from 'lucide-react'; // Install if you haven't: npm install lucide-react
+import React, { useState } from 'react';
+import './Sidebar.css'; // Import the CSS file
 
-function Sidebar() {
-    return (
-        <div className="sidebar">
-            <div className="profile-section">
-                <div className="profile-icon">
-                    <User />
-                </div>
-                <div className="profile-text">
-                    <span className="profile-label">Profile</span>
-                </div>
-            </div>
+const PopupSidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
 
-            <div className="contact-info">
-                <span className="contact-label">Contact Number</span>
-                <p className="contact-value">+63 912 345 6789</p>
-            </div>
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
+  };
 
-            <div className="email-info">
-                <span className="email-label">Email Address</span>
-                <p className="email-value">user@example.com</p>
-            </div>
+  return (
+    <div className="popup-sidebar-container">
+      {!isOpen && (
+        <button className="toggle-button" onClick={toggleSidebar} aria-label="Open Sidebar">
+          <div className="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+      )}
 
-            <button className="feedback-button">
-                <MessageSquare className="feedback-icon" />
-                Feedback
-            </button>
-
-            <div className="app-description">
-                <p>WALL-ET is a centralized online financial platform designed for Philippine users to simplify money management. It offers tools for budgeting, saving, and tracking expenses, empowering users to achieve financial goals with ease and convenience.</p>
-            </div>
-
-            <button className="logout-button">
-                <LogOut className="logout-icon" />
-                Logout
-            </button>
+      <aside className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div className="sidebar-profile">
+          <div className="profile-icon">P</div>
+          <div className="profile-info">
+            <h4>Profile</h4>
+          </div>
         </div>
-    );
-}
 
-export default Sidebar;
+        <div className="sidebar-wallet">
+          <h2>WALLET</h2>
+        </div>
+
+        <div className="sidebar-contact">
+          <p>
+            <strong>Contact Number</strong>
+            <br />
+            +63 912 345 6789
+          </p>
+          <p>
+            <strong>Email Address</strong>
+            <br />
+            user@example.com
+          </p>
+        </div>
+
+        <nav className="sidebar-nav">
+          <ul>
+            <li><a href="#">Dashboard</a></li>
+            {/* ... other navigation links ... */}
+          </ul>
+        </nav>
+
+        <div className="sidebar-footer">
+          <button>Feedback</button>
+          <button>Logout</button>
+        </div>
+      </aside>
+
+      {isOpen && <div className="sidebar-overlay" onClick={toggleSidebar}></div>}
+    </div>
+  );
+};
+
+export default PopupSidebar;
