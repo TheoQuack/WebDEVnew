@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dashboard.css';
+import Sidebar from './DashboardCompSideBar/Sidebar';
 import History from './DashboardCompHistory/History';
 import Progress from './DashboardCompProgress/Progress';
 import GoalPlanner from './DashboardCompGoalPlanner/GoalPlanner';
@@ -23,6 +24,9 @@ function Dashboard() {
     ];
 
     return (
+        <>
+        <div>
+         <Sidebar/>
         <div className="dashboard-container">
             <div className="dashboard-header">
                 <h1>Dashboard</h1>
@@ -31,21 +35,21 @@ function Dashboard() {
 
             <div className="dashboard-grid">
                 <div className="left-column">
-                    <div className="overview-card"> {/* New container for the overview components */}
+                    <div className="top-left-area"> {/* New container for Available and Target Balance */}
                         <div className="available-balance-card">
                             <h2>Available Balance</h2>
                             <p className="available-balance">₱150.00</p>
                         </div>
                         <TargetBalance targetBalance={150} remainingToGoal={150} />
-                        <TransactionLimits remaining={100} weeklyLimit={2500} />
-                        <LimitByCategory limits={limitsData} />
-                        <GoalPlanner
-                            progress={80}
-                            targetBalance={24000}
-                            currentBalance={19200}
-                            goalDetails={goalDetailsData}
-                        />
                     </div>
+                    <TransactionLimits remaining={100} weeklyLimit={2500} />
+                    <LimitByCategory limits={limitsData} />
+                    <GoalPlanner
+                        progress={80}
+                        targetBalance={24000}
+                        currentBalance={19200}
+                        goalDetails={goalDetailsData}
+                    />
                 </div>
 
                 <div className="right-column">
@@ -54,6 +58,9 @@ function Dashboard() {
                 </div>
             </div>
         </div>
+        </div>
+        </>
+    
     );
 }
 

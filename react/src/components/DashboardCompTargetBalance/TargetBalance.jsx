@@ -14,7 +14,7 @@ function TargetBalance({ targetBalance = 150, remainingToGoal = 150 }) {
             </div>
             <div className="remaining-goal-info">
                 <span>Remaining Goal</span>
-                <span display:inline-block>&nbsp; ₱{remainingToGoal}.00</span>
+                <span>&nbsp; ₱{remainingToGoal}.00</span>
             </div>
             <div className="progress-bar-container">
                 <div

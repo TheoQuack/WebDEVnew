@@ -1,11 +1,11 @@
 .dashboard-container {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    max-width: 950px; /* Adjust as needed */
-    width: 95%;
-    margin: 20px auto; /* Center the dashboard */
+    max-width: 1500px; /* Adjust as needed */
+    width: 100%;
+    margin: 10px 200px 200px auto; /* Center the dashboard */
 }
 
 .dashboard-header {
@@ -33,19 +33,18 @@
     gap: 20px;
 }
 
-/* New style for the container of the overview components */
-.overview-card {
-    background-color: #f9f9f9; /* The white box background */
-    border-radius: 8px;
-    border: 1px solid #eee;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Spacing between the components inside the box */
+/* New style for the top-left area to create two columns */
+.top-left-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .available-balance-card {
-    /* Styles for the available balance card remain the same */
+    background-color: #ffffff; /* The white box background */
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    padding: 20px;
 }
 
 .available-balance-card h2 {
